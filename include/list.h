@@ -5,6 +5,11 @@ typedef struct {
   node *first;
 } list;
 
-list* create_list();
-void remove_list(list *);
-void append(list *, void *, size_t);
+list* list_create();
+// deletes the entire list
+void list_delete(list *);
+void list_append(list *, void *, size_t);
+void* list_get(list*, int);
+// removes one element from the list
+void list_remove(list*, int);
+void list_forEach(list*, void (*function)(node*));

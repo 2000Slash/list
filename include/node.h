@@ -8,5 +8,8 @@ typedef struct node {
   struct node *next;
 } node;
 
-node* create_node(void *, size_t);
-void remove_node(node*);
+node* node_create(void *, size_t);
+// Also deletes nodes after this one
+void node_delete(node*);
+// removes node and returns node after
+node* node_remove(node*);
