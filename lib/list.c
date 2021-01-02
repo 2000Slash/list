@@ -22,6 +22,7 @@ void list_forEach(list *l, void (*function)(node*)) {
 
 void list_delete(list *l) {
   node_delete(l->first);
+  free(l);
 }
 
 void list_remove(list *l, int i) {

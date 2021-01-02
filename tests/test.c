@@ -18,4 +18,5 @@ int main() {
   puts("Remove second element");
   list_remove(l, 1);
   list_forEach(l, &printElement);
+  list_delete(l);
 }
